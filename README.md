@@ -38,4 +38,4 @@ Follow the next steps:
    3. DO NOT LEAVE ANY EXAMPLE CONTENT in the cloned project.
 3. Change the meta and title information in the `public/index.html`
 
-***Last updated: 12/08/2022***
+***Last updated: 12/05/2024***
