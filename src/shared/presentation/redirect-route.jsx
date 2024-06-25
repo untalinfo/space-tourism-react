@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import Proptypes from 'prop-types';
-import { exampleRoute } from '../../domains/exampleDomain/infrastructure/routes';
+
 import { homeRoute } from '../infrastructure/routing/routes';
+import { exampleRoute } from '../../domains/exampleDomain/infrastructure/routing/routes';
 
 export const PrivateRoute = ({ component: Component, layout: Layout, ...rest }) => {
 	return (

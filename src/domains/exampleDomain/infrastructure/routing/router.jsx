@@ -1,9 +1,9 @@
 import React from 'react';
-import { UnauthenticatedRoute } from '@vecindario/suite-dashboard-layout-lib';
 import { Route } from 'react-router-dom';
 import AdminLayout from '../../../../shared/presentation/layouts/AdminLayout';
 import ExamplePage from '../../presentation/pages/ExamplePage';
 import { exampleRoute, exampleRoutePublic } from './routes';
+import { UnauthenticatedRoute } from '../../../../shared/presentation/redirect-route';
 
 const exampleRouter = {
 	layout: AdminLayout,
