@@ -1,0 +1,28 @@
+@import '../../../application/theme/colors.scss';
+
+.explore-button-container {
+	@extend .bg-white;
+	@include centered-flex;
+	cursor: pointer;
+	border-radius: 50%;
+	width: 144px;
+	height: 144px;
+	transition: all 0.3s ease;
+
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: 0 0 0 calc(144px * 0.2) rgba(255, 255, 255, 0.3);
+	}
+
+	@include large-view {
+		width: 272px;
+		height: 272px;
+
+		&:hover,
+		&:focus,
+		&:active {
+			box-shadow: 0 0 0 calc(277px * 0.2) rgba(255, 255, 255, 0.3);
+		}
+	}
+}

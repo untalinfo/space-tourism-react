@@ -1,0 +1,49 @@
+@import '../../../../shared/application/theme/colors.scss';
+
+.container-home-page {
+	@include centered-flex;
+	width: 100%;
+	height: 100%;
+
+	> .hero {
+		@include centered-flex;
+		flex-direction: column;
+		row-gap: 24px;
+		width: 100%;
+		padding: 24px;
+		max-width: 1110px;
+
+		> .container-texts {
+			@include centered-flex;
+			flex-direction: column;
+			row-gap: 24px;
+			> .text-description {
+				text-align: center;
+			}
+		}
+
+		> .container-button {
+			@include centered-flex;
+			height: 382px;
+		}
+
+		@include medium-view {
+			padding: 128px 40px;
+		}
+
+		@include large-view {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 128px 24px;
+			width: 100%;
+
+			> .container-texts {
+				align-items: flex-start;
+				max-width: 50%;
+				> .text-description {
+					text-align: start;
+				}
+			}
+		}
+	}
+}
