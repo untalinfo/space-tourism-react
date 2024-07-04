@@ -1,4 +1,5 @@
 @import './fonts.scss';
+@import './mixins.scss';
 
 $fweights: 400, 500, 600, 700, 800, 900;
 
@@ -6,41 +7,77 @@ $fweights: 400, 500, 600, 700, 800, 900;
 	.h1,
 	.heading-XL {
 	@extend .font-text;
-	font-size: 14.4rem;
+	font-size: 8rem;
 	line-height: 171.9%;
 	letter-spacing: 0;
+
+	@include large-view {
+		font-size: 14.4rem;
+	}
 }
 @at-root h2#{&},
 	.h2,
 	.heading-L {
 	@extend .font-text;
-	font-size: 10rem;
+	font-size: 56rem;
 	line-height: 114.6%;
 	letter-spacing: 0;
+
+	@include small-view {
+		font-size: 8rem;
+	}
+
+	@include large-view {
+		font-size: 9.6rem;
+	}
 }
 @at-root h3#{&},
 	.h3,
 	.heading-M {
 	@extend .font-text;
-	font-size: 5.6rem;
+	font-size: 2.4rem;
 	line-height: 64.2%;
 	letter-spacing: 0;
+
+	@include small-view {
+		font-size: 4rem;
+	}
+
+	@include large-view {
+		font-size: 5.6rem;
+	}
 }
 @at-root h4#{&},
 	.h4,
 	.heading-S {
 	@extend .font-text;
-	font-size: 3.2rem;
+	font-size: 1.8rem;
 	line-height: 36.7%;
 	letter-spacing: 0;
+
+	@include small-view {
+		font-size: 2.4rem;
+	}
+
+	@include large-view {
+		font-size: 3.2rem;
+	}
 }
 @at-root h5#{&},
 	.h5,
 	.heading-XS {
 	@extend .font-description-condensed;
-	font-size: 2.8rem;
+	font-size: 1.6rem;
 	line-height: 33.6%;
 	letter-spacing: -4px;
+
+	@include small-view {
+		font-size: 2rem;
+	}
+
+	@include large-view {
+		font-size: 2.8rem;
+	}
 }
 
 .subheading-L {
@@ -57,15 +94,27 @@ $fweights: 400, 500, 600, 700, 800, 900;
 }
 .nav-text {
 	@extend .font-description-condensed;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	line-height: 19.2%;
 	letter-spacing: 0;
+
+	@include large-view {
+		font-size: 1.6rem;
+	}
 }
 @at-root p#{&},
 	.p,
 	.body {
 	@extend .font-description;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	line-height: 180%;
 	letter-spacing: 0;
+
+	@include small-view {
+		font-size: 1.6rem;
+	}
+
+	@include large-view {
+		font-size: 1.8rem;
+	}
 }

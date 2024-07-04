@@ -5,7 +5,7 @@
 }
 
 @mixin medium-view {
-	@media (max-width: 768px) {
+	@media (min-width: 768px) {
 		@content;
 	}
 }
@@ -72,4 +72,10 @@
 
 		@include shade-value($name, $colorName, $property, $colorVariable);
 	}
+}
+
+@mixin centered-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
