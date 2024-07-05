@@ -14,26 +14,25 @@ export const fetchDataSpace = createAsyncThunk('data/fetchData', async () => {
 	return data;
 });
 
-const dataSlice = createSlice({
-	name: 'data_space',
+const DataSpace = createSlice({
+	name: 'dataSpace',
 	initialState,
 	reducers: {},
-	extraReducers: (builder) => {
-		builder
-			.addCase(fetchDataSpace.fulfilled, (state, action) => {
-				state.destinations = action.payload.destinations;
-				state.crew = action.payload.crew;
-				state.technology = action.payload.technology;
-				state.loading = false;
-			})
-			.addCase(fetchDataSpace.pending, (state) => {
-				state.loading = true;
-			})
-			.addCase(fetchDataSpace.rejected, (state, action) => {
-				state.error = action.error.message;
-				state.loading = false;
-			});
+	extraReducers: {
+		[fetchDataSpace.fulfilled]: (state, action) => {
+			state.destinations = action.payload.destinations;
+			state.crew = action.payload.crew;
+			state.technology = action.payload.technology;
+			state.loading = false;
+		},
+		[fetchDataSpace.pending]: (state) => {
+			state.loading = true;
+		},
+		[fetchDataSpace.rejected]: (state, action) => {
+			state.error = action.error.message;
+			state.loading = false;
+		},
 	},
 });
 
-export default dataSlice.reducer;
+export default DataSpace.reducer;

@@ -19,7 +19,7 @@ $fweights: 400, 500, 600, 700, 800, 900;
 	.h2,
 	.heading-L {
 	@extend .font-text;
-	font-size: 56rem;
+	font-size: 5.6rem;
 	line-height: 114.6%;
 	letter-spacing: 0;
 
@@ -68,7 +68,7 @@ $fweights: 400, 500, 600, 700, 800, 900;
 	.heading-XS {
 	@extend .font-description-condensed;
 	font-size: 1.6rem;
-	line-height: 33.6%;
+	line-height: 33.6px;
 	letter-spacing: 4px;
 
 	@include small-view {
@@ -83,19 +83,19 @@ $fweights: 400, 500, 600, 700, 800, 900;
 .subheading-L {
 	@extend .font-text;
 	font-size: 2.8rem;
-	line-height: 32.1%;
+	line-height: 32px;
 	letter-spacing: 0;
 }
 .subheading-S {
 	@extend .font-description-condensed;
 	font-size: 1.4rem;
-	line-height: 16.8%;
+	line-height: calc(1.5rem * 1.68);
 	letter-spacing: 2px;
 }
 .nav-text {
 	@extend .font-description-condensed;
 	font-size: 1.4rem;
-	line-height: 19.2%;
+	line-height: 1.9rem;
 	letter-spacing: 0;
 
 	@include large-view {
@@ -107,7 +107,7 @@ $fweights: 400, 500, 600, 700, 800, 900;
 	.body {
 	@extend .font-description;
 	font-size: 1.5rem;
-	line-height: 180%;
+	line-height: calc(1.5rem * 1.8);
 	letter-spacing: 0;
 
 	@include small-view {

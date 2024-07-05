@@ -2,10 +2,11 @@ import React from 'react';
 import './HomePage.scss';
 import ExploreButton from '../../../../shared/presentation/components/ExploreButton/ExploreButton';
 import { history } from '../../../../shared/application/helpers/history';
+import { destinationRoute } from '../../../destination/infrastructure/routing/routes';
 
 const HomePage = () => {
 	const handleExplore = () => {
-		history.push();
+		history.push(destinationRoute);
 	};
 	return (
 		<section className="container-home-page">

@@ -1,0 +1,8 @@
+@import '../../../application/theme/colors.scss';
+
+.separator {
+	@extend .bg-white;
+	width: 100%;
+	height: 1px;
+	opacity: 0.4;
+}
