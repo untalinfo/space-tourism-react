@@ -92,32 +92,18 @@
 				}
 			}
 
-			> .contianer-statistics {
+			> .contianer-selector {
 				@include centered-flex;
 				flex-direction: column;
 				gap: 24px;
-				> .statistic {
-					@include centered-flex;
-					flex-direction: column;
-					row-gap: 12px;
-
-					> p {
-						text-transform: uppercase;
-					}
-				}
 
 				@include medium-view {
 					flex-direction: row;
-					> .statistic {
-						width: 245px;
-					}
 				}
 
 				@include large-view {
-					> .statistic {
-						width: 210px;
-						align-items: flex-start;
-					}
+					position: absolute;
+					bottom: 50px;
 				}
 			}
 

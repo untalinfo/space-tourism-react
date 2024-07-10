@@ -23,7 +23,7 @@ const CrewPage = () => {
 					<h4 className="member-role">{crewMember?.role}</h4>
 					<h3 className="member-name">{crewMember?.name}</h3>
 					<p className="member-description">{crewMember?.bio}</p>
-					<div className="contianer-statistics">
+					<div className="contianer-selector">
 						<MemberSelector handleSelectCrewMember={handleSelectCrewMember} memberSelected={memberSelected} />
 					</div>
 				</main>
