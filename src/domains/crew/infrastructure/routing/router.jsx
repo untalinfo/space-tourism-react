@@ -1,17 +1,17 @@
 import AdminLayout from '../../../../shared/presentation/layouts/AdminLayout';
 import { UnauthenticatedRoute } from '../../../../shared/presentation/redirect-route';
-import { destinationRoute } from './routes';
-import DestinationPage from '../../presentation/pages';
+import { crewRoute } from './routes';
+import CrewPage from '../../presentation/pages';
 
-const destinationRouter = {
+const crewRouter = {
 	layout: AdminLayout,
 	router: [
 		{
-			path: destinationRoute,
-			page: DestinationPage,
+			path: crewRoute,
+			page: CrewPage,
 			routeComponent: UnauthenticatedRoute,
 		},
 	],
 };
 
-export default destinationRouter;
+export default crewRouter;

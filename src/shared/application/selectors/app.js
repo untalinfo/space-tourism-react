@@ -17,9 +17,18 @@ export const getDestination = (destinationName) =>
 	});
 
 export const getCrew = createSelector(spaceState, (dataSpace) => {
+	console.log('HERE', dataSpace);
 	const { crew } = dataSpace;
 	return crew;
 });
+
+export const getCrewMember = (crewMember) =>
+	createSelector(spaceState, (dataSpace) => {
+		const { crew } = dataSpace;
+		if (!crew) return null;
+		return crew.find((destination) => destination.name === crewMember);
+	});
+
 export const getTechnology = createSelector(spaceState, (dataSpace) => {
 	const { technology } = dataSpace;
 	return technology;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { homeRoute } from '../../infrastructure/routing/routes';
 import { destinationRoute } from '../../../domains/destination/infrastructure/routing/routes';
+import { crewRoute } from '../../../domains/crew/infrastructure/routing/routes';
 
 export const MENU_ITEMS = [
 	{
@@ -25,7 +26,7 @@ export const MENU_ITEMS = [
 				<b>02</b> <p className="nav-text">CREW</p>
 			</>
 		),
-		path: '/example-public',
+		path: crewRoute,
 	},
 	{
 		label: (
@@ -47,6 +48,11 @@ export const PAGE_BACKGROUNDS = {
 		mobile: '../../../../public/assets/destination/background-destination-mobile.jpg',
 		tablet: '../../../../public/assets/destination/background-destination-tablet.jpg',
 		desktop: '../../../../public/assets/destination/background-destination-desktop.jpg',
+	},
+	[crewRoute]: {
+		mobile: '../../../../public/assets/crew/background-crew-mobile.jpg',
+		tablet: '../../../../public/assets/crew/background-crew-tablet.jpg',
+		desktop: '../../../../public/assets/crew/background-crew-desktop.jpg',
 	},
 };
 

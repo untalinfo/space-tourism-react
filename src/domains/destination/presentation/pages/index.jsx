@@ -13,7 +13,6 @@ const DestinationPage = () => {
 		setdestinationSelected(destinationValue);
 	};
 
-	console.log('HERE2', destination);
 	return (
 		<section className="container-destination-page">
 			<div className="container-destination-content">
