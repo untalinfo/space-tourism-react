@@ -5,7 +5,7 @@
 }
 
 @mixin medium-view {
-	@media (max-width: 768px) {
+	@media (min-width: 768px) {
 		@content;
 	}
 }
@@ -56,12 +56,7 @@
 	$colorsList: (
 		'primary': $primary,
 		'secondary': $secondary,
-		'success': $success,
-		'warning': $warning,
-		'error': $error,
-		'black': $black,
 		'white': $white,
-		'neutral': $neutral,
 	);
 
 	@each $colorName, $colorVariable in $colorsList {
@@ -77,4 +72,10 @@
 
 		@include shade-value($name, $colorName, $property, $colorVariable);
 	}
+}
+
+@mixin centered-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

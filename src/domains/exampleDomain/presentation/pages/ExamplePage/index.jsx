@@ -38,6 +38,7 @@ const ExamplePage = () => {
 					{todo}
 				</div>
 			))}
+			<p>hola como estan</p>
 		</div>
 	);
 };

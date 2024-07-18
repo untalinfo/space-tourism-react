@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import example, { initialState as exampleInitial } from '../../../domains/exampleDomain/application/slices/example';
-
-export const initialStates = {
-	example: exampleInitial,
-};
+import example from '../../../domains/exampleDomain/application/slices/example';
+import dataSpace from '../slices/app';
 
 export default combineReducers({
 	example,
+	dataSpace,
 });

@@ -1,0 +1,136 @@
+@import '../../../../shared/application/theme/colors.scss';
+
+.container-crew-page {
+	@include centered-flex;
+	padding: 24px;
+	width: 100%;
+	height: 100%;
+
+	> .container-crew-content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 24px;
+		width: 100%;
+
+		> .title-header {
+			@include centered-flex;
+			column-gap: 24px;
+			flex: 1;
+
+			> .number-title {
+				opacity: 0.5;
+				font-weight: bold;
+			}
+
+			@include medium-view {
+				align-self: flex-start;
+			}
+
+			&:first-child {
+				flex: 0 0 100%;
+			}
+		}
+
+		> .img-member-container {
+			@include centered-flex;
+			height: 203px;
+			width: 100%;
+			flex: 1;
+
+			> .img-picture {
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				> img {
+					width: 271.24px;
+					height: auto;
+					display: block;
+					-webkit-mask-image: linear-gradient(to top, transparent, black);
+					mask-image: linear-gradient(to top, transparent 1%, black 15%);
+
+					@include medium-view {
+						width: 446.74px;
+						height: auto;
+					}
+					@include large-view {
+						width: 539.28px;
+						height: auto;
+					}
+				}
+			}
+
+			@include medium-view {
+				height: 384px;
+			}
+			@include large-view {
+				height: 734px;
+			}
+		}
+
+		> .container-main-section {
+			@include centered-flex;
+			flex-direction: column;
+			gap: 24px;
+			flex: 1;
+			margin-top: 40px;
+			> .member-role {
+				font-weight: 200;
+				opacity: 0.8;
+			}
+			> .member-name,
+			> .member-role {
+				text-transform: uppercase;
+			}
+
+			> .member-description {
+				text-align: center;
+
+				@include large-view {
+					text-align: start;
+				}
+			}
+
+			> .contianer-selector {
+				@include centered-flex;
+				flex-direction: column;
+				gap: 24px;
+
+				@include medium-view {
+					flex-direction: row;
+				}
+
+				@include large-view {
+					position: absolute;
+					bottom: 50px;
+				}
+			}
+
+			@include medium-view {
+				max-width: 514px;
+			}
+
+			@include large-view {
+				align-items: flex-start;
+			}
+		}
+
+		@include large-view {
+			max-width: 1110px;
+			flex-direction: row;
+
+			> .title-header {
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	@include medium-view {
+		padding: 40px;
+	}
+
+	@include large-view {
+		padding: 48px 24px;
+	}
+}

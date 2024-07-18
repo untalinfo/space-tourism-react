@@ -1,0 +1,147 @@
+@import '../../../../shared/application/theme/colors.scss';
+
+.container-technology-page {
+	@include centered-flex;
+	padding: 24px;
+	width: 100%;
+	height: 100%;
+
+	> .container-technology-content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 24px;
+		width: 100%;
+
+		> .title-header {
+			@include centered-flex;
+			column-gap: 24px;
+			flex: 1;
+
+			> .number-title {
+				opacity: 0.5;
+				font-weight: bold;
+			}
+
+			@include medium-view {
+				align-self: flex-start;
+			}
+
+			&:first-child {
+				flex: 0 0 100%;
+			}
+		}
+
+		> .img-technology-container {
+			@include centered-flex;
+			height: 203px;
+			width: 100%;
+			flex: 1;
+			margin: 0 auto;
+
+			> .img-picture {
+				position: relative;
+				display: inline-block;
+				> img {
+					width: 100%;
+					height: auto;
+					display: block;
+
+					@include medium-view {
+						width: 100%;
+						height: auto;
+					}
+					@include large-view {
+						width: 539.28px;
+						height: auto;
+					}
+				}
+			}
+
+			@include medium-view {
+				height: 384px;
+			}
+			@include large-view {
+				height: 734px;
+			}
+		}
+
+		> .container-main-section {
+			@include centered-flex;
+			flex-direction: column;
+			gap: 24px;
+			flex: 1;
+
+			> .container-text {
+				@include centered-flex;
+				flex-direction: column;
+				gap: 24px;
+				> .title {
+					font-weight: 200;
+					opacity: 0.8;
+				}
+
+				> .technology-name,
+				> .title {
+					text-transform: uppercase;
+				}
+
+				> .technology-description {
+					text-align: center;
+
+					@include large-view {
+						text-align: start;
+					}
+				}
+				@include large-view {
+					> .technology-name,
+					> .title {
+						text-align: start;
+					}
+				}
+			}
+
+			> .contianer-selector {
+				@include centered-flex;
+				flex-direction: column;
+				gap: 24px;
+
+				@include medium-view {
+					flex-direction: row;
+				}
+
+				@include large-view {
+					flex-direction: row;
+				}
+			}
+
+			@include medium-view {
+				max-width: 514px;
+			}
+
+			@include large-view {
+				align-items: center;
+				flex-direction: row;
+				column-gap: 64px;
+			}
+		}
+
+		@include large-view {
+			max-width: 1110px;
+			flex-direction: row-reverse;
+
+			> .title-header {
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	@include medium-view {
+		padding: 40px;
+	}
+
+	@include large-view {
+		padding: 48px 24px;
+	}
+}
