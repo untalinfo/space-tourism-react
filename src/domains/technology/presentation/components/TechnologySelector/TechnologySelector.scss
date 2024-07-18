@@ -1,0 +1,45 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-technology-selector {
+	@include centered-flex;
+	justify-content: space-evenly;
+	flex: 1;
+	gap: 32px;
+	width: 100%;
+
+	> .item-technology {
+		@include centered-flex;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 50%;
+		width: 4rem;
+		height: 4rem;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+		&.selected {
+			@extend .bg-white;
+			@extend .color-primary;
+		}
+		&.selected,
+		&:hover {
+			border: 1px solid rgba(255, 255, 255, 1);
+		}
+		@include medium-view {
+			width: 5.6rem;
+			height: 5.6rem;
+		}
+
+		@include large-view {
+			width: 8rem;
+			height: 8rem;
+		}
+	}
+
+	@include medium-view {
+		justify-content: center;
+	}
+
+	@include large-view {
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+}

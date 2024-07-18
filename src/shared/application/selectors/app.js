@@ -29,7 +29,14 @@ export const getCrewMember = (crewMember) =>
 		return crew.find((destination) => destination.name === crewMember);
 	});
 
-export const getTechnology = createSelector(spaceState, (dataSpace) => {
+export const getTechnologies = createSelector(spaceState, (dataSpace) => {
 	const { technology } = dataSpace;
 	return technology;
 });
+
+export const getTechnology = (techName) =>
+	createSelector(spaceState, (dataSpace) => {
+		const { technology } = dataSpace;
+		if (!technology) return null;
+		return technology.find((tech) => tech.name === techName);
+	});

@@ -2,6 +2,7 @@ import React from 'react';
 import { homeRoute } from '../../infrastructure/routing/routes';
 import { destinationRoute } from '../../../domains/destination/infrastructure/routing/routes';
 import { crewRoute } from '../../../domains/crew/infrastructure/routing/routes';
+import { technologyRoute } from '../../../domains/technology/infrastructure/routing/routes';
 
 export const MENU_ITEMS = [
 	{
@@ -34,7 +35,7 @@ export const MENU_ITEMS = [
 				<b>03</b> <p className="nav-text">TECHNOLOGY</p>
 			</>
 		),
-		path: '/example-public',
+		path: technologyRoute,
 	},
 ];
 
@@ -53,6 +54,11 @@ export const PAGE_BACKGROUNDS = {
 		mobile: '../../../../public/assets/crew/background-crew-mobile.jpg',
 		tablet: '../../../../public/assets/crew/background-crew-tablet.jpg',
 		desktop: '../../../../public/assets/crew/background-crew-desktop.jpg',
+	},
+	[technologyRoute]: {
+		mobile: '../../../../public/assets/technology/background-technology-mobile.jpg',
+		tablet: '../../../../public/assets/technology/background-technology-tablet.jpg',
+		desktop: '../../../../public/assets/technology/background-technology-desktop.jpg',
 	},
 };
 
