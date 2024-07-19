@@ -6,7 +6,6 @@ import { getCrew } from '../../../../../shared/application/selectors/app';
 
 const MemberSelector = ({ handleSelectCrewMember, memberSelected }) => {
 	const crew = useSelector(getCrew);
-	console.log(crew);
 	return (
 		<div className="container-member-selector">
 			{crew.map((item, index) => {

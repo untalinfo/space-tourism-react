@@ -17,7 +17,6 @@ export const getDestination = (destinationName) =>
 	});
 
 export const getCrew = createSelector(spaceState, (dataSpace) => {
-	console.log('HERE', dataSpace);
 	const { crew } = dataSpace;
 	return crew;
 });

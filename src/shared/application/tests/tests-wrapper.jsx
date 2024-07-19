@@ -7,12 +7,11 @@ import configureMockStore from 'redux-mock-store';
 import { createMemoryHistory } from 'history';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
-import { initialStates } from '../store/reducers';
 
 const middlewares = [thunkMiddleware];
 const mockStore = configureMockStore(middlewares);
 
-export const makeStore = (state = initialStates) => {
+export const makeStore = (state) => {
 	return mockStore(state);
 };
 
