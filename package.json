@@ -2,6 +2,7 @@
   "name": "space-tourism-website",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://untalinfo.github.io/space-tourism-react",
   "dependencies": {
     "@hookform/resolvers": "^2.8.8",
     "@reduxjs/toolkit": "^1.8.0",
@@ -53,7 +54,9 @@
     "test:staged": "cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
     "coverage": "yarn test --coverage --watchAll=false --passWithNoTests",
     "prepare": "husky install",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -87,6 +90,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^6.1.1",
     "husky": "^8.0.3",
     "inquirer": "^9.2.11",
     "lint-staged": "^11.0.0",
