@@ -11,7 +11,7 @@ export default defineConfig(() => {
 			target: 'esnext',
 		},
 		build: {
-			outDir: 'esnext',
+			outDir: 'build',
 		},
 		css: {
 			preprocessorOptions: {
@@ -39,6 +39,8 @@ export default defineConfig(() => {
 			eslint(),
 			legacy({
 				targets: ['defaults', 'not IE 11'],
+				polyfills: ['es/object/has-own'],
+				modernPolyfills: ['es/object/has-own'],
 			}),
 		],
 		resolve: {
