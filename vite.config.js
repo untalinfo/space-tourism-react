@@ -11,7 +11,7 @@ export default defineConfig(() => {
 			target: 'esnext',
 		},
 		build: {
-			outDir: 'build',
+			outDir: 'esnext',
 		},
 		css: {
 			preprocessorOptions: {
