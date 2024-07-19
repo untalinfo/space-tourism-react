@@ -26,6 +26,7 @@ export default defineConfig(() => {
 		envPrefix: 'REACT_APP_',
 		optimizeDeps: {
 			esbuildOptions: {
+				target: 'esnext',
 				// Node.js global to browser globalThis
 				define: {
 					global: 'globalThis',
