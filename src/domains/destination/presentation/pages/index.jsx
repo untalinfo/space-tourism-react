@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './DestinationPage.scss';
 import { useSelector } from 'react-redux';
 import { getDestination } from '../../../../shared/application/selectors/app';
@@ -8,10 +8,17 @@ import DestinationSelector from '../components/DestinationSelector/DestinationSe
 const DestinationPage = () => {
 	const [destinationSelected, setdestinationSelected] = useState('Moon');
 	const destination = useSelector(getDestination(destinationSelected));
+	const [animate, setAnimate] = useState(false);
 
 	const handleSelectDestination = (destinationValue) => {
 		setdestinationSelected(destinationValue);
 	};
+
+	useEffect(() => {
+		setAnimate(true); // Activa la animación
+		const timeout = setTimeout(() => setAnimate(false), 600); // Duración de la animación (0.6s)
+		return () => clearTimeout(timeout); // Limpia el timeout
+	}, [destinationSelected]);
 
 	return (
 		<section className="container-destination-page">
@@ -24,7 +31,11 @@ const DestinationPage = () => {
 					<picture className="img-picture">
 						<source srcSet={destination?.images.webp} type="image/webp" />
 						<source srcSet={destination?.images.png} type="image/png" />
-						<img src={destination?.images.png} alt="Descripción de la imagen" />
+						<img
+							src={destination?.images.png}
+							alt="Descripción de la imagen"
+							className={animate ? 'slide-in-blurred-top' : ''}
+						/>
 					</picture>
 				</div>
 				<main className="container-main-section">
