@@ -7,6 +7,9 @@ import legacy from '@vitejs/plugin-legacy';
 
 export default defineConfig(() => {
 	return {
+		esbuild: {
+			target: 'esnext',
+		},
 		build: {
 			outDir: 'build',
 		},
@@ -23,26 +26,35 @@ export default defineConfig(() => {
 		envPrefix: 'REACT_APP_',
 		optimizeDeps: {
 			esbuildOptions: {
+				target: 'esnext',
 				// Node.js global to browser globalThis
 				define: {
 					global: 'globalThis',
 				},
 			},
 		},
-		plugins: [react(), envCompatible(), eslint(), legacy({
-			targets: ['defaults', 'not IE 11'],
-		})],
+		plugins: [
+			react(),
+			envCompatible(),
+			eslint(),
+			legacy({
+				targets: ['defaults', 'not IE 11'],
+				polyfills: ['es/object/has-own'],
+				modernPolyfills: ['es/object/has-own'],
+			}),
+		],
 		resolve: {
 			extensions: ['.js', '.jsx', 'json'],
 		},
 		server: {
 			port: process.env.PORT || 3000,
-			host: true
+			host: true,
 		},
 		test: {
 			environment: 'jsdom',
 			globals: true,
 			setupFiles: './src/setupTests.js',
 		},
+		base: '/',
 	};
 });
