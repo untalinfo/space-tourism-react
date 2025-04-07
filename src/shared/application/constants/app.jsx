@@ -46,19 +46,19 @@ export const PAGE_BACKGROUNDS = {
 		desktop: '/assets/home/background-home-desktop.jpg',
 	},
 	[destinationRoute]: {
-		mobile: '../../../../public/assets/destination/background-destination-mobile.jpg',
-		tablet: '../../../../public/assets/destination/background-destination-tablet.jpg',
-		desktop: '../../../../public/assets/destination/background-destination-desktop.jpg',
+		mobile: '/assets/destination/background-destination-mobile.jpg',
+		tablet: '/assets/destination/background-destination-tablet.jpg',
+		desktop: '/assets/destination/background-destination-desktop.jpg',
 	},
 	[crewRoute]: {
-		mobile: '../../../../public/assets/crew/background-crew-mobile.jpg',
-		tablet: '../../../../public/assets/crew/background-crew-tablet.jpg',
-		desktop: '../../../../public/assets/crew/background-crew-desktop.jpg',
+		mobile: '/assets/crew/background-crew-mobile.jpg',
+		tablet: '/assets/crew/background-crew-tablet.jpg',
+		desktop: '/assets/crew/background-crew-desktop.jpg',
 	},
 	[technologyRoute]: {
-		mobile: '../../../../public/assets/technology/background-technology-mobile.jpg',
-		tablet: '../../../../public/assets/technology/background-technology-tablet.jpg',
-		desktop: '../../../../public/assets/technology/background-technology-desktop.jpg',
+		mobile: '/assets/technology/background-technology-mobile.jpg',
+		tablet: '/assets/technology/background-technology-tablet.jpg',
+		desktop: '/assets/technology/background-technology-desktop.jpg',
 	},
 };
 
