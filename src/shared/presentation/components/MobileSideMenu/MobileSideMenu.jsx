@@ -7,7 +7,7 @@ import './MobileSideMenu.scss';
 const MobileSideMenu = ({ isOpen, toggleMenu, currentPath }) => {
 	return (
 		<div className={`mobile-side-menu ${isOpen && 'show-menu'}`}>
-			<img src="../../../../../public/assets/shared/icon-close.svg" alt="" onClick={toggleMenu} className="btn-close" />
+			<img src="/assets/shared/icon-close.svg" alt="" onClick={toggleMenu} className="btn-close" />
 			<nav className="menu">
 				{MENU_ITEMS.map((item, index) => {
 					return (

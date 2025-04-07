@@ -30,10 +30,10 @@ const AdminLayout = ({ children }) => {
 			</picture>
 			<header className="header-admin-layout">
 				<Link to={homeRoute}>
-					<img src="../../../../../public/assets/shared/logo.svg" alt="page logo" className="logo-icon" />
+					<img src="/assets/shared/logo.svg" alt="page logo" className="logo-icon" />
 				</Link>
 				<div onClick={handleToogleMenu} className="hamburguer-menu">
-					<img src="../../../../../public/assets/shared/icon-hamburger.svg" alt="" />
+					<img src="/assets/shared/icon-hamburger.svg" alt="" />
 				</div>
 				<MobileSideMenu isOpen={isOpeneMenuMobile} toggleMenu={handleToogleMenu} currentPath={currentPath} />
 				<nav className="menu">
