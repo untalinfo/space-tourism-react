@@ -41,9 +41,9 @@ export const MENU_ITEMS = [
 
 export const PAGE_BACKGROUNDS = {
 	[homeRoute]: {
-		mobile: '../../../../public/assets/home/background-home-mobile.jpg',
-		tablet: '../../../../public/assets/home/background-home-tablet.jpg',
-		desktop: '../../../../public/assets/home/background-home-desktop.jpg',
+		mobile: '/assets/home/background-home-mobile.jpg',
+		tablet: '/assets/home/background-home-tablet.jpg',
+		desktop: '/assets/home/background-home-desktop.jpg',
 	},
 	[destinationRoute]: {
 		mobile: '../../../../public/assets/destination/background-destination-mobile.jpg',
